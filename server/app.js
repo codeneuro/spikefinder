@@ -29,6 +29,10 @@ var start = function (opts) {
   app.listen(port, function () {
     debug('serving on port ' + port)
   })
+
+  app.get('/api/submissions/', function (req, res) {
+    return res.json([])
+  })
 }
 
 if (require.main === module) {
