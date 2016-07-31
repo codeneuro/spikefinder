@@ -1,0 +1,42 @@
+{
+  "name": "spikefinder",
+  "version": "1.0.0",
+  "description": "benchmarking app for spike detection",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify client/index.js -o client/bundle.js",
+    "serve": "node server/app.js",
+    "start": "watchify client/index.js -o client/bundle.js & node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeneuro/spikefinder.git"
+  },
+  "keywords": [
+    "neuron",
+    "app",
+    "leaderboard",
+    "benchmark"
+  ],
+  "author": "freeman-lab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codeneuro/spikefinder/issues"
+  },
+  "homepage": "https://github.com/codeneuro/spikefinder#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "browser-request": "^0.3.3",
+    "d3-scale": "^1.0.2",
+    "express": "^4.14.0",
+    "hxdx": "^1.0.0",
+    "jsonschema": "^1.1.0",
+    "lodash": "^4.14.1",
+    "minidux": "^1.0.1",
+    "mongoose": "^4.5.7",
+    "object-assign": "^4.1.0",
+    "parse-github-url": "^0.3.1",
+    "redux": "^3.5.2",
+    "timestamp": "0.0.1"
+  }
+}
