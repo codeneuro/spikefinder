@@ -16,7 +16,7 @@ var config = require('./config')
 // var Answer = require('./models/answer')
 // var Submission = require('./models/submission')
 
-mongoose.connect(config.db.uri)
+// mongoose.connect(config.db.uri)
 
 var start = function (opts) {
   opts = opts || {}
