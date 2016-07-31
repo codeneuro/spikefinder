@@ -24,6 +24,9 @@
     "url": "https://github.com/codeneuro/spikefinder/issues"
   },
   "homepage": "https://github.com/codeneuro/spikefinder#readme",
+  "devDependencies": {
+    "watchify": "^3.7.0"
+  },
   "dependencies": {
     "body-parser": "^1.15.2",
     "browser-request": "^0.3.3",
