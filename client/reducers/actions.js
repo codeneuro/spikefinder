@@ -1,5 +1,5 @@
 var request = require('browser-request')
-var congig = require('../../config')
+var config = require('../../config')
 
 var constants = {
   SELECT_TAB: 'SELECT_TAB',

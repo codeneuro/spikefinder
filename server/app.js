@@ -9,7 +9,7 @@ var timestamp = require('timestamp')
 var jsonschema = require('jsonschema')
 var spawn = require('child_process').spawn
 var debug = require('debug')('spikefinder')
-var config = require('../config')
+var config = require('./config')
 // var evaluate = require('./evaluate')
 // var schema = require('./schema')
 // var Dataset = require('./models/dataset')
@@ -28,7 +28,6 @@ var start = function (opts) {
 
   app.listen(port, function () {
     debug('serving on port ' + port)
-    debug('using host ' + config.host)
   })
 
   app.get('/api/submissions/', function (req, res) {
