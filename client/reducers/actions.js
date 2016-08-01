@@ -1,4 +1,5 @@
 var request = require('browser-request')
+var congig = require('../../config')
 
 var constants = {
   SELECT_TAB: 'SELECT_TAB',
@@ -15,7 +16,7 @@ var constants = {
   UPLOAD_RESET: 'UPLOAD_RESET'
 }
 
-var host = 'http://localhost:8080'
+var host = config.host
 
 function fetch () {
   return function (dx) {
