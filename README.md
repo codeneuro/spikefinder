@@ -2,6 +2,8 @@
 
 > benchmarking challenge for spike detection in imaging data
 
+WORK IN PROGRESS
+
 This repo contains the code for the web app (for displaying and submitting results) and the server (for storing and fetching results in a database). This document describes how to download the data, develop algoritms in your favorite computing environment, and submit your results for evaluation!
 
 # web app
