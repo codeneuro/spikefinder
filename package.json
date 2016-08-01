@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/codeneuro/spikefinder#readme",
   "devDependencies": {
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "browserify": "^13.1.0"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
