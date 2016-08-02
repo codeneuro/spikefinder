@@ -126,6 +126,16 @@ function submit (state) {
   <br>
   <div>
     Fill out the form below and drag your JSON file into the well. Multiple submissions from the same team are fine. Fun team names are also fine. Bonus points for including a link to a code repository!
+	
+  </div>
+  
+  <div>
+    By submitting your algorithm you agree to the following:
+	<ul>
+		<li> If your algorithm is among the top three performing algorithms, you agree to provide a complete description so we can compile a review paper, of which you will be co-author (max 4 persons per team).</li>
+		<li> If you are the winning team, you give us permission to give your contact details to our sponsor, Zeiss AG. They would like to invite the winning team to their research facilities in Oberkochen, Germany. 
+		
+			
   </div>
   <br>
 
@@ -133,6 +143,14 @@ function submit (state) {
     <div>
     <span style=${style.label}>team name</span> <input id='name' style=${style.input}>
     </div>
+	<div>
+    <span style=${style.label}>member names</span> <input id='members' style=${style.input}>
+    </div>
+	
+	<div>
+    <span style=${style.label}>affiliation(s)</span> <input id='affiliation' style=${style.input}>
+    </div>
+	
     <div>
     <span style=${style.label}>algorithm name</span> <input id='algorithm' style=${style.input}>
     </div>
