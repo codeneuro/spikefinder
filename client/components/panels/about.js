@@ -13,7 +13,7 @@ module.exports = function (state) {
     </div>
 	<br>
     <div>
-		<b>Here is the challenge</b>: We have assembled a collection of datasets of simultaneously measured calcium traces and action potentials (ground truth) for benchmarking algorithms. You can download the data, develop your algorithm in the language of your choice, and submit a file to this website with your results. The leaderboard will rank algorithm performance across datasets. We will close submissions on X.X.2017.
+		<b>Here is the challenge</b>: We have assembled a collection of datasets of simultaneously measured calcium traces and action potentials (ground truth) for benchmarking spike inference algorithms. You can download the data, develop your algorithm in the language of your choice, and submit a file to this website with your results. The leaderboard will rank algorithm performance across datasets. We will close submissions on 15th of January 2017.
 		
     </div>
     
@@ -21,9 +21,9 @@ module.exports = function (state) {
     <div>
 		<b>What's in it for you</b>: 
 			<ul>
-				<li>You get to advance the field and do a servive to the community.</li>
-				<li>The best three algorithms will receive an award, kindly sponspored by <a href="">Zeiss AG</a>. The winner will receive 1200€, the second place 500€ and the third place 300€.</li>
-				<li>We will compile a review paper detailing the advances made and reviewing the current state in spike inference for calcium imaging. It will feature the top five entries and include you as co-authors. </li>  
+				<li>You get to advance the field and do a service to the community.</li>
+				<li>The best three algorithms will receive an award, kindly sponspored by <a href="http://www.zeiss.com/corporate/en_de/careers.html">Zeiss AG</a>. The winner will receive 1200€, the second place 500€ and the third place 300€. The winner team will also be invited by Zeiss AG to visit their research departement in Germany.</li>
+				<li>We will compile a paper detailing the advances made and reviewing the current state in spike inference for calcium imaging. It will feature the top five entries and include you as co-authors. </li>  
 		
     </div>
     <br>
@@ -35,14 +35,27 @@ module.exports = function (state) {
 	
 	<br>
     <div>
-        <a href="http://www.berenslab.org" target=_blank>Philipp Berens (University of Tübingen)</a>
-		<a href="http://thefreemanlab.com" target=_blank>Jeremy Freeman (Janelia Research Campus)
-		<a href="http://www.bethgelab.org" target=_blank>Matthias Bethge (University of Tübingen)
-		<a href="http://www.jovo.me" target=_blank>Joshua Vogelstein (Johns Hopkins)
+	Organizers:
+        <a href="http://www.berenslab.org" target=_blank>Philipp Berens (University of Tübingen)</a><br>
+		<a href="http://thefreemanlab.com" target=_blank>Jeremy Freeman (Janelia Research Campus)<br>
+		<a href="http://www.bethgelab.org" target=_blank>Matthias Bethge (University of Tübingen)<br>
+		<a href="http://www.jovo.me" target=_blank>Joshua Vogelstein (Johns Hopkins)<br>
+		<a href="http://www.toliaslab.org" target=_blank>Andreas Tolias (Baylor College of Medicine)<br>
+		<a href="http://www.eulerlab.org" target=_blank>Thomas Euler (University of Tübingen)<br>
 		<a href="" target=_blank>Lucas Theis (Magic Pony Technology / Twitter)
 		
     </div>
 	
+	
+	<br>
+    <div>
+		Supported by:
+        <a href="http://www.zeiss.com/corporate/en_de/careers.html" target=_blank><img src="zeiss.logo.png"> </a>
+		<a href="http://www.bccn-tuebingen.de" target=_blank><img src="bccn.png"> </a>
+		<a href="http://www.janelia.org" target=_blank><img src="janelia.png"> </a>
+		<a href="http://www.uni-tuebingen.de" target=_blank><img src="unit.png"> </a>
+		
+    </div>
 	
 	
 	

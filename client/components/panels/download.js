@@ -41,33 +41,35 @@ module.exports = function (state) {
 
   return hx`<div>
     <div>
-      The data provided here consists of simultaneously measured calcium traces and spike trains. They were obtained using different calcium indicators (OGB, GCamp6s), in different neural tissues (V1, retina) using different scanning technologies (AOD, galvo, resonant) and cover therefore quite a range of applications. Importantly, all cells were recorded in "population imaging" mode instead of zooming in on individual cells. For details regarding the dataset, please refer to Theis et al. (2016).
+      The data provided here consists of simultaneously measured calcium traces and spike trains. They were obtained using different calcium indicators (OGB, GCamp6s), in different neural tissues (V1, retina) using different scanning technologies (AOD, galvo, resonant) and cover therefore quite a range of applications. Importantly, all cells were recorded in "population imaging" mode instead of zooming in on individual cells. For details regarding the dataset, please refer to table 1 in Theis et al. (2016).
     </div>
 	<br>
     
 	<div>
-      Data has been generously provided by the <a href="http://www.toliaslab.org" target=_blank>Andreas Tolias lab</a> (Baylor College of Medicine, Houston, USA) and the <a href="http://www.eulerlab.org" target=_blank>Euler lab</a> (University of Tübingen, Germany).
+      Data has been recorded in the <a href="http://www.toliaslab.org" target=_blank>Andreas Tolias lab</a> (Baylor College of Medicine, Houston, USA) and the <a href="http://www.eulerlab.org" target=_blank>Euler lab</a> (University of Tübingen, Germany).
     </div>
     <br>   
 
     <div>
-      Ground truth spike trains were obtained by performing single cell electrophysiological recordings simultaneous with the two-photon imaging. Calcium and spiking data has been resampled to a common sampling rate of 100 Hz. We removed any linear trends from the calcium trace using robust regression. 
+      Ground truth spike trains were obtained by performing single cell electrophysiological recordings simultaneous with the two-photon imaging. Calcium and spiking data has been resampled to a common sampling rate of 100 Hz. . 
 	</div>
     <br>
 
 	
 	<div>
-      Each dataset is available as a zip file, and includes DESCRIBE DATA FORMAT, metadata, and code for loading the data in python, and matlab. The code examples are also on <a href='https://github.com/codeneuro/spikefinder-datasets'>github</a>. ANY FURTHER DATA DESCRIPTION Labels are provided only for training data.
+      Training datasets are provided with ground truth in CSV format. There are five datasets numbered 1-5. For each one there is a calcium file with calcium flouresence signals, and a spike file with spike rates. For test datasets, there is only a calcium file. <br>
+	  All data has been resampled at a common rate of 100 Hz. We removed any linear trends from the calcium trace using robust regression (see Theis et al. 2016 for details of preprocessing).<br>
+	  The columns of each table are neurons, and the rows are time points. In a given dataset, some neurons will have slightly different numbers of time points than others, this is expected. Along with the data itself, each download includes example loading scripts in python and matlab, the source code of which is in this reposistory. The code examples are also on <a href='https://github.com/codeneuro/spikefinder-datasets'>github</a>. 
     </div>
     
 	<div>
-      Training datasets (including labels) POINT TO REAL DATA
+      Training datasets (including spikes) POINT TO REAL DATA
     </div>
     <br>
     <div style=${style.list}>${training()}</div>
     <br>
     <div>
-      Testing datasets (no labels) POINT TO REAL DATA
+      Testing datasets (not including spikes) POINT TO REAL DATA
     </div>
     <br>
     <div style=${style.list}>${testing()}</div>
