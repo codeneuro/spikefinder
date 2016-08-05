@@ -22,7 +22,7 @@ module.exports = function (state) {
 		<b>What's in it for you</b>: 
 			<ul>
 				<li>You get to advance the field and do a service to the community.</li>
-				<li>The best three algorithms will receive an award, kindly sponspored by <a href="http://www.zeiss.com/corporate/en_de/careers.html">Zeiss AG</a>. The winner will receive 1200€, the second place 500€ and the third place 300€. The winner team will also be invited by Zeiss AG to visit their research departement in Germany.</li>
+				<li>The best three algorithms will receive an award, kindly sponspored by <a href="http://www.zeiss.com/corporate/en_de/careers.html">Carl Zeiss AG</a>. The winner will receive 1200€, the second place 500€ and the third place 300€. The winner team will also be invited by Zeiss AG to visit their research departement in Germany.</li>
 				<li>We will compile a paper detailing the advances made and reviewing the current state in spike inference for calcium imaging. It will feature the top five entries and include you as co-authors. </li>  
 		
     </div>
