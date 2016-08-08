@@ -41,27 +41,51 @@ module.exports = function (state) {
 
   return hx`<div>
     <div>
-      Data has been generously provided by LIST NAMES OF LABS.
+      The data provided here consists of simultaneously measured calcium traces and spike trains. They were obtained using different calcium indicators (OGB, GCamp6s), in different neural tissues (V1, retina) using different scanning technologies (AOD, galvo, resonant) and cover therefore quite a range of applications. Importantly, all cells were recorded in "population imaging" mode instead of zooming in on individual cells. For details regarding the dataset, please refer to table 1 in Theis et al. (2016).
     </div>
-    <br>
-    <div>
-      Each dataset is available as a zip file, and includes DESCRIBE DATA FORMAT, metadata, and code for loading the data in python, and matlab. The code examples are also on <a href='https://github.com/codeneuro/spikefinder-datasets'>github</a>. ANY FURTHER DATA DESCRIPTION Labels are provided only for training data.
+	<br>
+    
+	<div>
+      Data has been recorded in the <a href="http://www.toliaslab.org" target=_blank>Andreas Tolias lab</a> (Baylor College of Medicine, Houston, USA) and the <a href="http://www.eulerlab.org" target=_blank>Euler lab</a> (University of Tübingen, Germany).
     </div>
-    <br>
+    <br>   
+
     <div>
-      EXPLANATION OF HOW GROUND TRUTH LABELS WERE OBTAINED
+      Ground truth spike trains were obtained by performing single cell electrophysiological recordings simultaneous with the two-photon imaging. Calcium and spiking data has been resampled to a common sampling rate of 100 Hz. . 
+	</div>
+    <br>
+
+	
+	<div>
+      Training datasets are provided with ground truth in CSV format. There are five datasets numbered 1-5. For each one there is a calcium file with calcium flouresence signals, and a spike file with spike rates. For test datasets, there is only a calcium file. <br>
+	  All data has been resampled at a common rate of 100 Hz. We removed any linear trends from the calcium trace using robust regression (see Theis et al. 2016 for details of preprocessing).<br>
+	  The columns of each table are neurons, and the rows are time points. In a given dataset, some neurons will have slightly different numbers of time points than others, this is expected. Along with the data itself, each download includes example loading scripts in python and matlab, the source code of which is in this reposistory. The code examples are also on <a href='https://github.com/codeneuro/spikefinder-datasets'>github</a>. 
     </div>
-    <br>
-    <div>
-      Training datasets (including labels) POINT TO REAL DATA
+    
+	<div>
+      Training datasets (including spikes) POINT TO REAL DATA
     </div>
     <br>
     <div style=${style.list}>${training()}</div>
     <br>
     <div>
-      Testing datasets (no labels) POINT TO REAL DATA
+      Testing datasets (not including spikes) POINT TO REAL DATA
     </div>
     <br>
     <div style=${style.list}>${testing()}</div>
+	
+	<br>
+    <div>
+      WE COULD ADD TABLE 1 FROM THE PAPER HERE
+    </div>
+    <br>
+	
+	
+	<div>
+      References: <br>
+	  Theis, Berens, Froudarakis, Reimer, Roman-Roson, Euler, Tolias, Bethge (2016):  Benchmarking Spike Rate Inference in Population Calcium Imaging, Neuron, <a href="http://linkinghub.elsevier.com/retrieve/pii/S0896627316300733">Link</a>
+    </div>
+    <br>
+    
   </div>`
 }

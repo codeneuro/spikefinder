@@ -117,15 +117,24 @@ function submit (state) {
   return hx`
   <div>
   <div>
-    To submit your algorithm, just run it locally on all the test datasets and generate a JSON file with the results! The format should be an EXPLAIN SUBMISSION FORMAT See <a href='https://github.com/codeneuro/spikefinder'>here</a> for examples of saving results from python or matlab, and see <a href='https://github.com/codeneuro/spikefinder-python'>here</a> for detailed info and code for the metrics used to evaluate results.
+    To submit your algorithm, just run it locally on all the training and test datasets and generate csv files with the results! 
   </div>
   <br>
   <div>
-  JSON STRUCTURE FOR SUBMISSION
-  </div>
+	The files should be named according to our naming convention: for example, 1.test.predicted.csv would be the spike rate predictions for the test neurons from the first dataset. The format of the csv file should be the same as for the provided data sets, that is columns correspond to neurons and rows are time points sampled at 100 Hz. For each file, the column should contain the predicted spike rate or count for the neuron in the same column in the corresponding calcium file. 
+	<br>See <a href='https://github.com/codeneuro/spikefinder'>here</a> for examples of saving results from python or matlab, and see <a href='https://github.com/codeneuro/spikefinder-python'>here</a> for detailed info and code for the metrics used to evaluate results.  </div>
   <br>
   <div>
-    Fill out the form below and drag your JSON file into the well. Multiple submissions from the same team are fine. Fun team names are also fine. Bonus points for including a link to a code repository!
+    To create a submission, fill out the form below and drag your csv files into the well. Multiple submissions from the same team are fine. Please note that we will show training set performance on the leaderboard until the official end of the challenge on January 15th, 2017 to prevent overfitting on the test set. Only submissions containing predictions for all datasets will be evaluated. 
+	  </div>
+  
+  <div>
+    By submitting your algorithm you agree to the following:
+	<ul>
+		<li> If your algorithm is among the top three performing algorithms, you agree to provide a complete description so we can compile a review paper, of which you will be co-author (max 4 persons per team).</li>
+		<li> If you are the winning team, you give us permission to give your contact details to our sponsor, Zeiss AG. They would like to invite the winning team to their research facilities in Oberkochen, Germany. 
+		
+			
   </div>
   <br>
 
@@ -133,11 +142,15 @@ function submit (state) {
     <div>
     <span style=${style.label}>team name</span> <input id='name' style=${style.input}>
     </div>
+	<div>
+    <span style=${style.label}>member names (separated by comma) </span> <input id='members' style=${style.input}>
+    </div>
+		
     <div>
     <span style=${style.label}>algorithm name</span> <input id='algorithm' style=${style.input}>
     </div>
     <div>
-    <span style=${style.label}>contact info</span> <input placeholder='email, github name, or website' id='contact' style=${style.input}>
+    <span style=${style.label}>contact info</span> <input placeholder='email or github name' id='contact' style=${style.input}>
     </div>
     <div>
     <span style=${style.label}>code repository</span> <input placeholder='optional' id='repository' style=${style.input}>
@@ -145,7 +158,7 @@ function submit (state) {
   </div>
 
   <div id='dropzone' ondrop=${ondrop} ondragover=${ondragover} ondragenter=${ondragenter} ondragleave=${ondragleave} style=${style.dropzone}>
-    <span style=${style.droptext}>drop result file here</span>
+    <span style=${style.droptext}>drop result files here</span>
     ${status()}
   </div>
 
