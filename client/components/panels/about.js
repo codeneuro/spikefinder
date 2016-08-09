@@ -40,10 +40,10 @@ module.exports = function (state) {
     </div>
 	  <br>
     <div>Supported by:
-      <a href="http://www.zeiss.com/corporate/en_de/careers.html" target=_blank><img src="zeiss.logo.png"> </a>
-  		<a href="http://www.bccn-tuebingen.de" target=_blank><img src="bccn.png"> </a>
-  		<a href="http://www.janelia.org" target=_blank><img src="janelia.png"> </a>
-  		<a href="http://www.uni-tuebingen.de" target=_blank><img src="unit.png"> </a>
+      <a href="http://www.zeiss.com/corporate/en_de/careers.html" target=_blank><img src="./components/assets/images/zeiss.logo.png"> </a>
+  		<a href="http://www.bccn-tuebingen.de" target=_blank><img src="./components/assets/images/bccn.png"> </a>
+  		<a href="http://www.janelia.org" target=_blank><img src="./components/assets/images/janelia.png"> </a>
+  		<a href="http://www.uni-tuebingen.de" target=_blank><img src="./components/assets/images/unit.png"> </a>
     </div>
   </div>`
 }
