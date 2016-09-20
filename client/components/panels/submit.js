@@ -118,30 +118,18 @@ function submit (state) {
   <div>
     <div>
       <div>
-        To submit your algorithm, just run it locally on all the training and test datasets and generate csv files with the results! 
+        To submit your algorithm, run it locally on the test datasets and generate CSV files with inferred spiking! 
       </div>
       <br>
-      <div>The files should be named according to our naming convention: for example, 1.test.predicted.csv would be the spike rate predictions for the test neurons from the first dataset. The format of the csv file should be the same as for the provided data sets, that is columns correspond to neurons and rows are time points sampled at 100 Hz. For each file, the column should contain the predicted spike rate or count for the neuron in the same column in the corresponding calcium file. <br>See <a href='https://github.com/codeneuro/spikefinder'>here</a> for examples of saving results from python or matlab, and see <a href='https://github.com/codeneuro/spikefinder-python'>here</a> for detailed info and code for the metrics used to evaluate results.
+      <div>The format of each CSV file should be the same as for the training data sets: columns correspond to neurons and rows are time points sampled at 100 Hz. You should submit one file for each training and testing dataset e.g. <a><span style=${style.dataset}>1.train.spikes.csv</span></a>, <a><span style=${style.dataset}>2.train.spikes.csv</span></a>, etc. and <a><span style=${style.dataset}>1.test.spikes.csv</span></a>, <a><span style=${style.dataset}>2.test.spikes.csv</span></a>, etc. In each file, each column should contain the predicted spike rate or count for the neuron in the same column in the corresponding calcium file. See <a href='https://github.com/codeneuro/spikefinder'>here</a> for examples of saving results from python or matlab, and see <a href='https://github.com/codeneuro/spikefinder-python'>here</a> for detailed info and code for the metrics used to evaluate results.
       </div>
       <br>
-      <div>To create a submission, fill out the form below and drag your csv files into the well. Multiple submissions from the same team are fine. Please note that we will show training set performance on the leaderboard until the official end of the challenge on January 15th, 2017 to prevent overfitting on the test set. Only submissions containing predictions for all datasets will be evaluated. 
+      <div>To create a submission, fill out the form below and drag your CSV files into the well. Multiple submissions from the same group are fine. Submissions must include predictions for all trianing and testing data. We will show training set performance on the leaderboard until the official end of the challenge (January 15th, 2017) to prevent overfitting on the test set.
   	  </div>
-      <div>By submitting your algorithm you agree to the following:
-        <ul>
-          <li> If your algorithm is among the top three performing algorithms, you agree to provide a complete description so we can compile a review paper, of which you will be co-author (max 4 persons per team).
-          </li>
-          <li> If you are the winning team, you give us permission to give your contact details to our sponsor, Zeiss AG. They would like to invite the winning team to their research facilities in Oberkochen, Germany. 
-          </li>
-        </ul>
-      </div>
       <br>
       <div style=${style.form}>
-        <div>
-          <span style=${style.label}>team name</span>
-          <input id='name' style=${style.input}>
-        </div>
       	<div>
-          <span style=${style.label}>submitters</span> 
+          <span style=${style.label}>submitter name</span> 
           <input id='members' style=${style.input}>
         </div>
         <div>
