@@ -24,7 +24,10 @@ module.exports = function (state) {
       See the 'download' and 'submit' tabs to get started. If you have any problems you can open an issue on <a href='https://github.com/codeneuro/spikefinder'>github</a> or come talk to us in the <a href='https://gitter.im/codeneuro/spikefinder'>chatroom</a>!
     </div>
     <br>
-    <div>Organized by <a href="http://www.berenslab.org" target=_blank>Philipp Berens</a>, <a href="http://thefreemanlab.com" target=_blank>Jeremy Freeman</a>, <a href="http://www.bethgelab.org" target=_blank>Matthias Bethge</a>, <a href="http://www.jovo.me" target=_blank>Joshua Vogelstein</a>, <a href="http://www.toliaslab.org" target=_blank>Andreas Tolias</a>, <a href="http://www.eulerlab.org" target=_blank>Thomas Euler</a>, <a href="" target=_blank>Lucas Theis</a>, and many community contributiors! Thanks to Zeiss for supporting the award. <br><a href="http://www.zeiss.com/corporate/en_de/careers.html" target=_blank><img style='margin-top: 10px' src="./components/assets/images/zeiss.logo.png"> </a>
+    <div>Organized by <a href="http://www.berenslab.org" target=_blank>Philipp Berens</a>, <a href="http://thefreemanlab.com" target=_blank>Jeremy Freeman</a>, <a href="http://www.bethgelab.org" target=_blank>Matthias Bethge</a>, <a href="http://www.jovo.me" target=_blank>Joshua Vogelstein</a>, <a href="http://www.toliaslab.org" target=_blank>Andreas Tolias</a>, <a href="http://www.eulerlab.org" target=_blank>Thomas Euler</a>, <a href="" target=_blank>Lucas Theis</a>, and many community contributiors!
+    </div>
+    <br>
+    <div style=${{textAlign: 'right'}}>Award sponsored by Zeiss<a href="http://www.zeiss.com/corporate/en_de/careers.html" target=_blank><img style='margin-top: 10px; margin-left: 15px' src="./components/assets/images/zeiss.logo.png"></img></a>
       </div>
   </div>`
 }

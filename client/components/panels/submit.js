@@ -11,6 +11,15 @@ function submit (state) {
       display: 'inline-block',
       textAlign: 'right'
     },
+    dataset: {
+      backgroundColor: 'rgb(235,235,235)',
+      paddingLeft: '5px',
+      paddingRight: '5px',
+      marginLeft: '5px',
+      marginRight: '5px',
+      marginBottom: '5px',
+      display: 'inline-block'
+    },
     input: {
       fontFamily: 'Abel',
       fontSize: '18px',
@@ -121,7 +130,7 @@ function submit (state) {
         To submit your algorithm, run it locally on the test datasets and generate CSV files with inferred spiking! 
       </div>
       <br>
-      <div>The format of each CSV file should be the same as for the training data sets: columns correspond to neurons and rows are time points sampled at 100 Hz. You should submit one file for each training and testing dataset e.g. <a><span style=${style.dataset}>1.train.spikes.csv</span></a>, <a><span style=${style.dataset}>2.train.spikes.csv</span></a>, etc. and <a><span style=${style.dataset}>1.test.spikes.csv</span></a>, <a><span style=${style.dataset}>2.test.spikes.csv</span></a>, etc. In each file, each column should contain the predicted spike rate or count for the neuron in the same column in the corresponding calcium file. See <a href='https://github.com/codeneuro/spikefinder'>here</a> for examples of saving results from python or matlab, and see <a href='https://github.com/codeneuro/spikefinder-python'>here</a> for detailed info and code for the metrics used to evaluate results.
+      <div>The format of each CSV file should be the same as for the training data sets: columns correspond to neurons and rows are time points sampled at 100 Hz. You should submit one file for each training and testing dataset e.g. 1.train.spikes.csv, 2.train.spikes.csv, etc. and 1.test.spikes.csv, 2.test.spikes.csv, etc. In each file, each column should contain the predicted spike rate or count for the neuron in the same column in the corresponding calcium file. See <a href='https://github.com/codeneuro/spikefinder'>here</a> for examples of saving results from python or matlab, and see <a href='https://github.com/codeneuro/spikefinder-python'>here</a> for detailed info and code for the metrics used to evaluate results.
       </div>
       <br>
       <div>To create a submission, fill out the form below and drag your CSV files into the well. Multiple submissions from the same group are fine. Submissions must include predictions for all trianing and testing data. We will show training set performance on the leaderboard until the official end of the challenge (January 15th, 2017) to prevent overfitting on the test set.
