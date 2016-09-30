@@ -37,7 +37,7 @@ module.exports = function (state) {
     The data are simultaneously measured calcium traces and spike trains, and cover a range of applications, including different calcium indicators (GCaMP5, GCaMP6, jRCAMP, jRGECO, OGB), different circuits (V1, retina), and different scanning technologies (AOD, galvo, resonant). Spike trains were obtained by performing single cell electrophysiological recordings simultaneous with imaging. 
   </div>
 	<br>
-  Dataset download links
+  <span style=${style.dataset}>DATASET DOWNLOADS</span>
   <br>
   <div style='margin-top: 8px'>
     <span style=${style.dataset}><a href=${'https://s3.amazonaws.com/neuro.datasets/challenges/spikefinder/spikefinder.training.zip'}>01-10 training data</a></span>
