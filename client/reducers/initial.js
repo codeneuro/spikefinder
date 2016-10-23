@@ -6,7 +6,7 @@ module.exports = {
     completed: false,
     message: ''
   },
-  submissions: {
+  results: {
     loading: true,
     search: '',
     entries: []
