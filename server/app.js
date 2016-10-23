@@ -26,12 +26,25 @@ var start = function (opts) {
   app.use(parser.urlencoded({ extended: false }))
   app.use(parser.json({limit: '50mb'}))
 
-  app.listen(port, function () {
-    debug('serving on port ' + port)
+  app.get('/api/results/', function (req, res) {
+    Result.find({}, function (err, data) {
+      return res.json(data)
+    })
   })
 
   app.get('/api/submissions/', function (req, res) {
-    return res.json([])
+    Submission.find({}, function (err, data) {
+      return res.json(data)
+    })
+  })
+
+  app.post('/api/submit/', function (req, res) {
+    var answers = req.body.answers
+    console.log(answers)
+  })
+
+  app.listen(port, function () {
+    debug('serving on port ' + port)
   })
 }
 
