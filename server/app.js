@@ -12,11 +12,11 @@ var debug = require('debug')('spikefinder')
 var config = require('./config')
 // var evaluate = require('./evaluate')
 // var schema = require('./schema')
-// var Dataset = require('./models/dataset')
-// var Answer = require('./models/answer')
-// var Submission = require('./models/submission')
 
-// mongoose.connect(config.db.uri)
+var Result = require('./models/result')
+var Submission = require('./models/submission')
+
+mongoose.connect(config.db.uri)
 
 var start = function (opts) {
   opts = opts || {}
