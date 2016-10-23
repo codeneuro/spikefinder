@@ -9,11 +9,11 @@ var config = {
   db: {
     user: process.env.MONGO_USER,
     password: process.env.MONGO_PASSWORD,
-    name: 'neurofinder'
+    name: 'spikefinder'
   }
 }
 
-var baseuri = 'mongodb://%s:%s@ds013829-a0.mlab.com:13829,ds013829-a1.mlab.com:13829/%s?replicaSet=rs-ds013829'
+var baseuri = 'mongodb://%s:%s@ds031007-a0.mlab.com:31007,ds031007-a1.mlab.com:31007/%s?replicaSet=rs-ds031007'
 config.db.uri = format(baseuri, config.db.user, config.db.password, config.db.name)
 
 module.exports = config
