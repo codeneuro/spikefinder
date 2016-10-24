@@ -4,7 +4,7 @@ var config = require('../../config')
 var constants = {
   SELECT_TAB: 'SELECT_TAB',
   DESELECT_TAB: 'DESELECT_TAB',
-  FETCH_SUBMISSIONS: 'FETCH_SUBMISSIONS',
+  FETCH_RESULTS: 'FETCH_RESULTS',
   SHOW_DETAIL: 'SHOW_DETAIL',
   HIDE_DETAIL: 'HIDE_DETAIL',
   SET_INFO: 'SET_INFO',
@@ -22,17 +22,17 @@ function fetch () {
   return function (dx) {
     request({
       method: 'GET', 
-      url: host + '/api/submissions', 
+      url: host + '/api/results', 
       json: true
     }, function (err, res, body) {
       if (err) {
         return dx({
-          type: constants.FETCH_SUBMISSIONS, 
+          type: constants.FETCH_RESULTS, 
           success: false
         })
       }
       return dx({
-        type: constants.FETCH_SUBMISSIONS, 
+        type: constants.FETCH_RESULTS, 
         success: true,
         entries: body
       })

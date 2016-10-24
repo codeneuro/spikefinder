@@ -42,12 +42,12 @@ var upload = function (state, action) {
   }
 }
 
-var submissions = function (state, action) {
-  if (typeof state === 'undefined') state = initial.submissions
+var results = function (state, action) {
+  if (typeof state === 'undefined') state = initial.results
 
   switch (action.type) {
 
-    case o.FETCH_SUBMISSIONS:
+    case o.FETCH_RESULTS:
       var entries = action.entries.map(function (entry) {return assign({}, entry, {detail: false})})
       if (action.success) return {loading: false, entries: entries}
       else return {loading: true}
@@ -87,5 +87,5 @@ var submissions = function (state, action) {
 module.exports = combine({
   upload: upload,
   tab: tab,
-  submissions: submissions
+  results: results
 })

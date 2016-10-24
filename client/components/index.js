@@ -2,7 +2,7 @@ var hx = require('hxdx').hx
 var dx = require('hxdx').dx
 
 var panels = require('./panels')
-var submissions = require('./submissions')
+var results = require('./results')
 
 module.exports = function (state) {
   var style = {
@@ -91,7 +91,7 @@ module.exports = function (state) {
       ${logo}
       ${tabs}
       ${panels(state.tab)}
-      ${submissions(state.submissions)}
+      ${results(state.results)}
       <div style=${style.footer}>questions? see the <a href='https://github.com/codeneuro/spikefinder'>code</a>, join the <a href='https://gitter.im/codeneuro/spikefinder'>chat</a></div>
     </div>`
 }
