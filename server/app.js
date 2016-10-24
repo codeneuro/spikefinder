@@ -39,8 +39,8 @@ var start = function (opts) {
   })
 
   app.post('/api/submit/', function (req, res) {
-    var answers = req.body.answers
-    console.log(answers)
+    console.log(req.body.contents.length)
+    return res.status(200).end('submission succeeeded')
   })
 
   app.listen(port, function () {
