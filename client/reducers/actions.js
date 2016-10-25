@@ -42,21 +42,24 @@ function fetch () {
 
 function submit (data) {
   return function (dx) {
-    request({
-      method: 'POST', 
-      url: host + '/api/submit', 
-      body: JSON.stringify(data), 
-      json: true
-    }, function (req, res, body) {
-      if (res.statusCode == 200) {
-        fetch()(dx)
-        dx({ type: 'UPLOAD_SUCCESS' })
-        setTimeout(function () {
-          dx({ type: 'UPLOAD_RESET' })
-        }, 2000)
-      }
-      else dx({ type: 'UPLOAD_ERROR', message: res.response || 'failed to upload' })
-    })
+    setTimeout(function () {
+      request({
+        method: 'POST', 
+        url: host + '/api/submit', 
+        body: JSON.stringify(data), 
+        json: true
+      }, function (req, res, body) {
+        if (res.statusCode == 200) {
+          fetch()(dx)
+          dx({ type: 'UPLOAD_SUCCESS' })
+          setTimeout(function () {
+            dx({ type: 'UPLOAD_RESET' })
+          }, 2000)
+        }
+        else dx({ type: 'UPLOAD_ERROR', message: res.response || 'failed to upload' })
+      })
+    }, 100)
+    
   }
 }
 

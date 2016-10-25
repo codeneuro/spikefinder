@@ -31,6 +31,7 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "browser-request": "^0.3.3",
+    "csv-parser": "^1.11.0",
     "d3-scale": "^1.0.2",
     "envify": "^3.4.1",
     "express": "^4.14.0",
@@ -39,9 +40,11 @@
     "lodash": "^4.14.1",
     "minidux": "^1.0.1",
     "mongoose": "^4.5.7",
+    "neat-csv": "^2.1.0",
     "parse-github-url": "^0.3.1",
     "redux": "^3.5.2",
     "s3": "^4.4.0",
+    "string-to-stream": "^1.1.0",
     "timestamp": "0.0.1"
   }
 }

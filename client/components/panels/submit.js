@@ -2,6 +2,10 @@ var hx = require('hxdx').hx
 var dx = require('hxdx').dx
 var ax = require('../../reducers/actions')
 var connect = require('hxdx').connect
+var isequal = require('lodash').isEqual
+var async = require('async')
+var map = require('lodash').map
+var csv = require('neat-csv')
 var gh = require('parse-github-url')
 
 function submit (state) {
@@ -58,11 +62,17 @@ function submit (state) {
   }
 
   function status () {
-    if (state.upload.submitting) return hx`<div className='loader loader-green'></div>`
+    if (state.upload.submitting) return hx`<div className='loader loader-red'></div>`
     else if (state.upload.error) return hx`<div style=${style.message}>${state.upload.message}</div>`
     else if (state.upload.completed) return hx`<div style=${style.message}>completed!</div>`
     else return hx`<div style=${style.message}></div>`
   }
+
+  var train = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+  var test = ['1', '2', '3', '4', '5']
+  var required = train.map(function (d) {return d + '.train.spikes.csv'}).concat(
+    test.map(function (d) {return d + '.test.spikes.csv'})
+  )
 
   function ondrop (event, data) {
     event.stopPropagation()
@@ -70,40 +80,51 @@ function submit (state) {
 
     dx({ type: 'UPLOAD_STARTED' })
 
+    function read (file, cb) {
+      var reader = new FileReader()
+      reader.onloadend = function () {
+        cb(null, {dataset: file.name.replace('csv', ''), values: this.result})
+      }
+      reader.readAsText(file)
+    }
+
     var failed = false
     var message = ''
 
     try {
-      var reader = new FileReader()
-      reader.onloadend = function () {
-        try {
-          var answers = JSON.parse(this.result)
-        } catch (e) {
-          failed = true
-          message = 'error parsing file!'
-        }
-        var payload = {
-          repository: document.querySelector('#repository').value,
-          name: document.querySelector('#name').value,
-          contact: document.querySelector('#contact').value,
-          algorithm: document.querySelector('#algorithm').value,
-          answers: answers
-        }
+      var payload = {
+        repository: document.querySelector('#repository').value,
+        name: document.querySelector('#name').value,
+        contact: document.querySelector('#contact').value,
+        algorithm: document.querySelector('#algorithm').value,
+      }
 
-        Array('name', 'contact', 'algorithm').forEach(function (field) {
-          console.log(payload[field])
-          if (!payload[field] || payload[field] == '') {
-            failed = true
-            message = 'forget a form?'
+      Array('name', 'contact', 'algorithm').forEach(function (field) {
+        if (!payload[field] || payload[field] == '') {
+          failed = true
+          message = 'forget a form?'
+        }
+      })
+
+      var filenames = map(event.dataTransfer.files, function (d) {return d.name})
+
+      if (!isequal(filenames.sort(), required.sort())) {
+        failed = true
+        message = 'one or more files are missing'
+      }
+
+      if (failed) {
+        dx({ type: 'UPLOAD_ERROR', message: message})
+      } else {
+        async.map(event.dataTransfer.files, read, function (err, contents) {
+          if (err) {
+            dx({ type: 'UPLOAD_ERROR', message: 'error parsing files'})
+          } else {
+            payload['contents'] = contents
+            ax.submit(payload)(dx)
           }
         })
-        if (!failed) {
-          ax.submit(payload)(dx)
-        } else {
-          dx({ type: 'UPLOAD_ERROR', message: message })
-        }
       }
-      reader.readAsText(event.dataTransfer.files[0])
     } catch (err) {
       dx({ type: 'UPLOAD_ERROR', message: 'error reading file!' })
     }

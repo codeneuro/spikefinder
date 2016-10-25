@@ -16,7 +16,7 @@ var config = require('./config')
 var Result = require('./models/result')
 var Submission = require('./models/submission')
 
-mongoose.connect(config.db.uri)
+//mongoose.connect(config.db.uri)
 
 var start = function (opts) {
   opts = opts || {}
@@ -39,8 +39,10 @@ var start = function (opts) {
   })
 
   app.post('/api/submit/', function (req, res) {
-    var answers = req.body.answers
-    console.log(answers)
+    
+    // handle evaluation here
+    
+    return res.status(200).end('submission succeeeded')
   })
 
   app.listen(port, function () {
