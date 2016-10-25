@@ -62,7 +62,7 @@ function submit (state) {
   }
 
   function status () {
-    if (state.upload.submitting) return hx`<div className='loader loader-green'></div>`
+    if (state.upload.submitting) return hx`<div className='loader loader-red'></div>`
     else if (state.upload.error) return hx`<div style=${style.message}>${state.upload.message}</div>`
     else if (state.upload.completed) return hx`<div style=${style.message}>completed!</div>`
     else return hx`<div style=${style.message}></div>`
@@ -121,7 +121,6 @@ function submit (state) {
             dx({ type: 'UPLOAD_ERROR', message: 'error parsing files'})
           } else {
             payload['contents'] = contents
-            console.log(payload)
             ax.submit(payload)(dx)
           }
         })

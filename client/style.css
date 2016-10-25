@@ -97,9 +97,9 @@ input:focus {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
-.loader-green:before,
-.loader-green:after,
-.loader-green {
+.loader-red:before,
+.loader-red:after,
+.loader-red {
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
@@ -136,20 +136,20 @@ input:focus {
   0%,
   80%,
   100% {
-    box-shadow: 0 2.5em 0 -1.3em rgb(86, 171, 114);
+    box-shadow: 0 2.5em 0 -1.3em rgb(242, 112, 108);
   }
   40% {
-    box-shadow: 0 2.5em 0 0 rgb(86, 171, 114);
+    box-shadow: 0 2.5em 0 0 rgb(242, 112, 108);
   }
 }
 @keyframes load7 {
   0%,
   80%,
   100% {
-    box-shadow: 0 2.5em 0 -1.3em rgb(86, 171, 114);
+    box-shadow: 0 2.5em 0 -1.3em rgb(242, 112, 108);
   }
   40% {
-    box-shadow: 0 2.5em 0 0 rgb(86, 171, 114);
+    box-shadow: 0 2.5em 0 0 rgb(242, 112, 108);
   }
 }
 
