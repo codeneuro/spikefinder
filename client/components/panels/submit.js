@@ -153,14 +153,18 @@ function submit (state) {
       <br>
       <div>The format of each CSV file should be the same as for the training data sets: columns correspond to neurons and rows are time points sampled at 100 Hz. You should submit one file for each training and testing dataset e.g. 1.train.spikes.csv, 2.train.spikes.csv, etc. and 1.test.spikes.csv, 2.test.spikes.csv, etc. In each file, each column should contain the predicted spike rate or count for the neuron in the same column in the corresponding calcium file. See <a href='https://github.com/codeneuro/spikefinder'>here</a> for examples of saving results from python or matlab, and see <a href='https://github.com/codeneuro/spikefinder-python'>here</a> for detailed info and code for the metrics used to evaluate results.
       </div>
+	  <br>
+      <div>The leaderboard will show multiple evaluation metrics, but the competition will be scored on pearson correlation between the true and infered spike trains resampled to 25 Hz as in Theis et al. (2016). 
+  	  </div>
+      
       <br>
-      <div>To create a submission, fill out the form below and drag your CSV files into the well. Multiple submissions from the same group are fine. Submissions must include predictions for all trianing and testing data. We will show training set performance on the leaderboard until the official end of the challenge (January 15th, 2017) to prevent overfitting on the test set.
+      <div>To create a submission, fill out the form below and drag your CSV files into the well. Multiple submissions from the same group are fine. Submissions must include predictions for all training and testing data. We will show training set performance on the leaderboard until the official end of the challenge (January 31st, 2017) to prevent overfitting on the test set.
   	  </div>
       <br>
       <div style=${style.form}>
       	<div>
-          <span style=${style.label}>submitter name</span> 
-          <input id='name' style=${style.input}>
+          <span style=${style.label}>submitter names</span> 
+          <input id='members' style=${style.input}>
         </div>
         <div>
           <span style=${style.label}>algorithm name</span>
@@ -180,6 +184,11 @@ function submit (state) {
         <span style=${style.droptext}>drop result files here</span>
         ${status()}
       </div>
+	  <br>
+	  <div> <i>Disclaimer & Terms: By submitting you agree to cooperate with us in preparing an article describing the results of this challenge, by making a complete description of your algorithm and executable code in Matlab, Python or other language of choice available. Included in the article will be all algorithms beating the current state of the art (STM/oopsi) and their contributors will be co-authors on the paper. We will award the prize money for winning the benchmark with respect to mean pearson correlation between true and inferred spike trains at 25 HZ computed on the test set. You data will not be shared with anyone without your consent, in particular not with our sponsor.
+  	  </div>
+      
+      
     </div>
   </div>
   `
