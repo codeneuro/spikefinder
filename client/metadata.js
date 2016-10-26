@@ -49,7 +49,7 @@ module.exports = {
   },
   '9.train.spikes': {
     display: '09',
-    indicator: 'OGB-1',
+    indicator: 'jRCAMP1a',
     area: 'V1',
     source: 'Dana et al., 2016'
   },
