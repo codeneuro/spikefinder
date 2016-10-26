@@ -40,7 +40,7 @@ module.exports = function (state) {
     },
     number: {
       marginTop: '10px',
-      marginLeft: '-19px',
+      marginLeft: '-22px',
       position: 'absolute',
       pointerEvents: 'none'
     },
