@@ -8,4 +8,4 @@ var components = require('./components')
 var store = createStore(reducer, initial)
 hxdx.render(components, store)
 
-//actions.fetch()(hxdx.dx)
+actions.fetch()(hxdx.dx)

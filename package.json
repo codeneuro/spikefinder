@@ -45,6 +45,7 @@
     "redux": "^3.5.2",
     "s3": "^4.4.0",
     "string-to-stream": "^1.1.0",
-    "timestamp": "0.0.1"
+    "timestamp": "0.0.1",
+    "tmp": "0.0.29"
   }
 }

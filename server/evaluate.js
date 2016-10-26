@@ -3,9 +3,9 @@ var tmp = require('tmp')
 var path = require('path')
 var exec = require('child_process').exec
 
-module.exports = function (dataset, cb) {
+module.exports = function (dataset, values, cb) {
   function write (dir, cb) {
-    fs.writeFile(path.join(dir, dataset + '.csv'), JSON.stringify(a), function (err) {
+    fs.writeFile(path.join(dir, dataset + '.csv'), values, function (err) {
       if (err) return cb(err)
       else cb()
     })

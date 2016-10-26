@@ -83,7 +83,7 @@ function submit (state) {
     function read (file, cb) {
       var reader = new FileReader()
       reader.onloadend = function () {
-        cb(null, {dataset: file.name.replace('csv', ''), values: this.result})
+        cb(null, {dataset: file.name.replace('.csv', ''), values: this.result})
       }
       reader.readAsText(file)
     }

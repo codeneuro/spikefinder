@@ -58,7 +58,7 @@ input:focus {
 }
 
 .entry:hover {
-  border-left: solid 6px rgb(242, 112, 108) !important;
+  border-left: solid 6px rgb(136, 138, 140) !important;
   padding-left: 3px !important;
 }
 

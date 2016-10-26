@@ -61,14 +61,22 @@ module.exports = function (state) {
       marginBottom: '5px'
     },
     cell: {
-      width: (33 / state.results.length) + '%',
+      width: (33 / state.contents.length) + '%',
       height: '50px',
       paddingLeft: '5%',
       backgroundColor: 'rgb(100,100,100)',
       borderRadius: '2px'
     },
     icon: {
-      verticalAlign: 'bottom'
+      position: 'absolute',
+      display: 'inline-block',
+      marginLeft: '-29px',
+      marginTop: '4px'
+    },
+    byline: {
+      fontSize: '80%',
+      color: 'rgb(150,150,150)',
+      paddingBottom: '5px'
     }
   }
 
@@ -79,12 +87,12 @@ module.exports = function (state) {
     else dx({type: 'SHOW_DETAIL', _id: state._id})
   }
 
-  var fields = state.results[0].scores.map(function (score) {
+  var fields = state.contents[0].scores.map(function (score) {
     return score.label
   }).filter(function (label) {return label !== 'combined'})
 
   function row (field) {
-    var selected = state.results.map(function (result) {
+    var selected = state.contents.map(function (result) {
       return result.scores.filter(function (score) {
         return score.label === field
       }).map(function (score) {return {value: score.value, field: field, lab: result.lab, dataset: result.dataset}})
@@ -100,11 +108,11 @@ module.exports = function (state) {
   }
 
   function header () {
-    return hx`<div style=${style.row}>${row('combined')}</div>`
+    return hx`<div style=${style.row}>${row('corr')}</div>`
   }
 
   function matrix () {
-    return Array('recall', 'precision', 'inclusion', 'exclusion').map(function (field) {
+    return Array('rank', 'info', 'loglik').map(function (field) {
       return hx`<div style=${style.row}>${row(field)}</div>`
     })
   }
@@ -126,7 +134,7 @@ module.exports = function (state) {
 
   function detail () {
     if (state.info) return hx`<div><div>${state.info.dataset}</div><div>${state.info.lab}</div></div>`
-    else return hx`<div><div>mouse over</div><div>for info</div></div>`
+    else return hx`<div><div>mouse over</div><div>for dataset info</div></div>`
   }
 
   function contact (value) {
@@ -155,11 +163,11 @@ module.exports = function (state) {
 
   return hx`<div className='entry' style=${style.box} onclick=${onclick}>
     <div style=${style.info}>
-      ${link(contact(state.contact))}
-      <span>${state.name}</span>
-      <br>
       ${link(repository(state.repository))}
       <span>${state.algorithm}</span>
+      <br>
+      ${link(contact(state.contact))}
+      <span style=${style.byline}>by ${state.name}</span>
     </div>
     <div style=${style.header}>${header()}</div>
     <div style=${style.detail}>${detail()}</div>
