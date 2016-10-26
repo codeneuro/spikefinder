@@ -2,6 +2,7 @@ var hx = require('hxdx').hx
 var dx = require('hxdx').dx
 var _ = require('lodash')
 var d3 = require('d3-scale')
+var meta = require('../../metadata.js')
 
 module.exports = function (state) {
   var style = {
@@ -80,12 +81,21 @@ module.exports = function (state) {
     }
   }
 
-  var scale = d3.scaleLinear().domain([0, 1]).range(["rgb(80, 110, 90)", "rgb(100, 240, 160)"])
+  var scales = {
+    corr: d3.scaleLinear().domain([0, 1]).range(["rgb(95, 54, 53)", "rgb(224, 104, 100)"]),
+    rank: d3.scaleLinear().domain([0, 1]).range(["rgb(95, 54, 53)", "rgb(224, 104, 100)"]),
+    loglik: d3.scaleLinear().domain([-10, 10]).range(["rgb(95, 54, 53)", "rgb(224, 104, 100)"]),
+    info: d3.scaleLinear().domain([0, 20]).range(["rgb(95, 54, 53)", "rgb(224, 104, 100)"])
+  }
 
   function onclick () {
     if (state.detail) dx({type: 'HIDE_DETAIL', _id: state._id})
     else dx({type: 'SHOW_DETAIL', _id: state._id})
   }
+
+  state.contents = state.contents.filter(function (entry) {
+    return entry.dataset.indexOf('train') > -1
+  })
 
   var fields = state.contents[0].scores.map(function (score) {
     return score.label
@@ -100,7 +110,8 @@ module.exports = function (state) {
     selected = _.sortBy(selected, function (item) {return item[0].dataset})
     return selected.map(function (item) {
       var value = item[0].value.toFixed(2)
-      var cell = Object.assign({}, style.cell, {backgroundColor: scale(value)})
+      value = value.slice(0, 4)
+      var cell = Object.assign({}, style.cell, {backgroundColor: scales[field](value)})
       return hx`<div data-info=${item[0]} style=${cell} onmouseover=${onmouseover} onmouseout=${onmouseout}>
         <span style=${style.number}>${value}</span>
       </div>`
@@ -133,7 +144,10 @@ module.exports = function (state) {
   }
 
   function detail () {
-    if (state.info) return hx`<div><div>${state.info.dataset}</div><div>${state.info.lab}</div></div>`
+    if (state.info) {
+      var info = meta[state.info.dataset]
+      return hx`<div><div>dataset ${info.display}</div><div>${info.indicator} in ${info.area}</div><div>${info.source}</div></div>`
+    }
     else return hx`<div><div>mouse over</div><div>for dataset info</div></div>`
   }
 

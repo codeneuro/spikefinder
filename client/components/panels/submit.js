@@ -58,6 +58,10 @@ function submit (state) {
     message: {
       marginTop: '15px',
       pointerEvents: 'none'
+    },
+    disclaimer: {
+      fontSize: '14px',
+      fontStyle: 'italic'
     }
   }
 
@@ -91,7 +95,7 @@ function submit (state) {
     var failed = false
     var message = ''
 
-    try {
+    // try {
       var payload = {
         repository: document.querySelector('#repository').value,
         name: document.querySelector('#name').value,
@@ -125,9 +129,9 @@ function submit (state) {
           }
         })
       }
-    } catch (err) {
-      dx({ type: 'UPLOAD_ERROR', message: 'error reading file!' })
-    }
+    // } catch (err) {
+    //   dx({ type: 'UPLOAD_ERROR', message: 'error reading file!' })
+    // }
     document.querySelector('#dropzone').style.border = 'dotted 4px rgb(242, 112, 108)'
   }
 
@@ -164,7 +168,7 @@ function submit (state) {
       <div style=${style.form}>
       	<div>
           <span style=${style.label}>submitter names</span> 
-          <input id='members' style=${style.input}>
+          <input id='name' style=${style.input}>
         </div>
         <div>
           <span style=${style.label}>algorithm name</span>
@@ -184,11 +188,11 @@ function submit (state) {
         <span style=${style.droptext}>drop result files here</span>
         ${status()}
       </div>
-	  <br>
-	  <div> <i>Disclaimer & Terms: By submitting you agree to cooperate with us in preparing an article describing the results of this challenge, by making a complete description of your algorithm and executable code in Matlab, Python or other language of choice available. Included in the article will be all algorithms beating the current state of the art (STM/oopsi) and their contributors will be co-authors on the paper. We will award the prize money for winning the benchmark with respect to mean pearson correlation between true and inferred spike trains at 25 HZ computed on the test set. You data will not be shared with anyone without your consent, in particular not with our sponsor.
-  	  </div>
-      
-      
+  	  <br>
+      <br>
+      <br>
+  	  <div style=${style.disclaimer}>Disclaimer & Terms: By submitting you agree to cooperate with us in preparing an article describing the results of this challenge, by making a complete description of your algorithm and executable code in Matlab, Python or other language of choice available. Included in the article will be all algorithms beating the current state of the art (STM/oopsi) and their contributors will be co-authors on the paper. We will award the prize money for winning the benchmark with respect to mean pearson correlation between true and inferred spike trains at 25 HZ computed on the test set. Your data will not be shared with anyone without your consent, in particular not with our sponsor.
+    	</div>
     </div>
   </div>
   `
