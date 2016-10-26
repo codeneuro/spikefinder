@@ -5,6 +5,7 @@ var d3 = require('d3-scale')
 var meta = require('../../metadata.js')
 
 module.exports = function (state) {
+
   var style = {
     box: {
       border: 'solid 3px rgb(136, 138, 140)',
@@ -62,7 +63,7 @@ module.exports = function (state) {
       marginBottom: '5px'
     },
     cell: {
-      width: (33 / state.contents.length) + '%',
+      width: (28 / state.contents.length) + '%',
       height: '50px',
       paddingLeft: '5%',
       backgroundColor: 'rgb(100,100,100)',
@@ -93,10 +94,6 @@ module.exports = function (state) {
     else dx({type: 'SHOW_DETAIL', _id: state._id})
   }
 
-  state.contents = state.contents.filter(function (entry) {
-    return entry.dataset.indexOf('train') > -1
-  })
-
   var fields = state.contents[0].scores.map(function (score) {
     return score.label
   }).filter(function (label) {return label !== 'combined'})
@@ -108,7 +105,7 @@ module.exports = function (state) {
       }).map(function (score) {return {value: score.value, field: field, lab: result.lab, dataset: result.dataset}})
     })
 
-    selected = _.sortBy(selected, function (item) {return item[0].dataset})
+    selected = _.sortBy(selected, function (item) {return item[0].dataset.replace('10', 'Z')})
     return selected.map(function (item) {
       var value = item[0].value.toFixed(2)
       value = value.slice(0, 4)

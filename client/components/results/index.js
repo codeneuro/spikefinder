@@ -39,6 +39,13 @@ module.exports = function (state) {
       filtered.push(selected)
     })
 
+    filtered = filtered.map(function (entry) {
+      entry.contents = entry.contents.filter(function (item) {
+        return item.dataset.indexOf('train') > -1
+      })
+      return entry
+    })
+
     var list = filtered.sort(function (a, b) {
       return total(b) - total(a)}).map(function (item) {
         return entry(item)
