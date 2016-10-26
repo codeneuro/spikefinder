@@ -10,7 +10,7 @@ module.exports = function (state) {
     return hx`<div></div>`
   } else {
     function total (entry) {
-      return entry.results.map(function (result) {
+      return entry.contents.map(function (result) {
         return result.scores.filter(function (score) {
           return score.label === 'combined'
         }).map(function (score) { return score.value })[0]
