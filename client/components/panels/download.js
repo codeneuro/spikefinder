@@ -40,10 +40,10 @@ module.exports = function (state) {
   <span style=${style.dataset}>DATASET DOWNLOADS</span>
   <br>
   <div style='margin-top: 8px'>
-    <span style=${style.dataset}><a href=${'https://s3.amazonaws.com/neuro.datasets/challenges/spikefinder/spikefinder.training.zip'}>01-10 training data</a></span>
+    <span style=${style.dataset}><a href=${'https://s3.amazonaws.com/neuro.datasets/challenges/spikefinder/spikefinder.train.zip'}>01-10 training data</a></span>
   </div>
   <div>
-    <span style=${style.dataset}><a href=${'https://s3.amazonaws.com/neuro.datasets/challenges/spikefinder/spikefinder.testing.zip'}>01-05 testing data</a></span>
+    <span style=${style.dataset}><a href=${'https://s3.amazonaws.com/neuro.datasets/challenges/spikefinder/spikefinder.test.zip'}>01-05 testing data</a></span>
   </div>
   <br>
 	<div>

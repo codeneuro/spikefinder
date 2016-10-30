@@ -95,7 +95,7 @@ function submit (state) {
     var failed = false
     var message = ''
 
-    // try {
+    try {
       var payload = {
         repository: document.querySelector('#repository').value,
         name: document.querySelector('#name').value,
@@ -129,9 +129,9 @@ function submit (state) {
           }
         })
       }
-    // } catch (err) {
-    //   dx({ type: 'UPLOAD_ERROR', message: 'error reading file!' })
-    // }
+    } catch (err) {
+      dx({ type: 'UPLOAD_ERROR', message: 'unknown error reading file!' })
+    }
     document.querySelector('#dropzone').style.border = 'dotted 4px rgb(242, 112, 108)'
   }
 
