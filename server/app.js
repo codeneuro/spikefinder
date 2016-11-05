@@ -24,7 +24,7 @@ var start = function (opts) {
   var app = express()
   app.use(express.static(path.join(__dirname, '../client')))
   app.use(parser.urlencoded({ extended: false }))
-  app.use(parser.json({limit: '100mb'}))
+  app.use(parser.json({limit: '200mb'}))
 
   app.get('/api/results/', function (req, res) {
     Result.find({}, function (err, data) {
