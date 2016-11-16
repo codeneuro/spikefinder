@@ -47,7 +47,8 @@ function submit (data) {
         method: 'POST', 
         url: host + '/api/submit', 
         body: JSON.stringify(data), 
-        json: true
+        json: true,
+        timeout: 10 * 60 * 1000
       }, function (req, res, body) {
         if (res.statusCode == 200) {
           fetch()(dx)
