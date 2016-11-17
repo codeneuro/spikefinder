@@ -20,7 +20,7 @@ module.exports = function (state) {
     </div>
     <br>
     <div>
-      By participating, you get to advance the field and help the neuroscience community! The best algorithms will also receive an award, kindly sponspored by <a href="http://www.zeiss.com/corporate/en_de/careers.html">Carl Zeiss AG</a>. The winner will receive 1200€, the second place 500€ and the third place 300€. The winner will also be invited to visit the Zeiss AG research departement in Germany. We will report on the challenge in an article featuring any algorithms that beat current state of the art (STM/oopsi).
+      By participating, you get to advance the field and help the neuroscience community! The best algorithms will also receive an award, kindly sponspored by <a href="http://www.zeiss.com/corporate/en_de/careers.html">Carl Zeiss AG</a>. The winning team will receive 1200€, the second place 500€ and the third place 300€. The winner will also be invited to visit the Zeiss AG research departement in Germany. We will report on the challenge in an article featuring any algorithms that beat current state of the art (STM/oopsi).
     </div>
     <br>
     <div>
