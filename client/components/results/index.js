@@ -12,7 +12,7 @@ module.exports = function (state) {
     function total (entry) {
       return entry.contents.map(function (result) {
         return result.scores.filter(function (score) {
-          return score.label === 'combined'
+          return score.label === 'corr'
         }).map(function (score) { return score.value })[0]
       }).reduce(function (x, y) {return x + y})
     }

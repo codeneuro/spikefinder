@@ -13,7 +13,7 @@ module.exports = function (dataset, values, cb) {
 
   tmp.dir(function (err, dir) {
     write(dir, function () {
-      var cmd = 'spikefinder evaluate ' + dir + '/' + dataset + '.csv ' + 'answers/' + dataset + '.csv'
+      var cmd = 'spikefinder evaluate ' + 'answers/' + dataset + '.csv ' + dir + '/' + dataset + '.csv'
       exec(cmd, function (err, stdout, stderr) {
         if (err) return cb(err)
         else if (stderr) return cb(err)
