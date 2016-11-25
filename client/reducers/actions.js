@@ -50,7 +50,7 @@ function submit (data) {
         json: true,
         timeout: 10 * 60 * 1000
       }, function (req, res, body) {
-        if (res.statusCode != 500) {
+        if (res.statusCode == 200) {
           fetch()(dx)
           dx({ type: 'UPLOAD_SUCCESS' })
           setTimeout(function () {

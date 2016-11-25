@@ -55,7 +55,7 @@ var start = function (opts) {
       debug('computing results')
       async.map(answers.contents, function (item, next) {
         evaluate(item.dataset, item.values, function (err, scores) {
-          if (err) return next({stage: 'computing results', error: err})
+          if (err) next({stage: 'computing results', error: err})
           var reformatted = []
           _.forEach(scores, function (value, label) {
             reformatted.push({label: label, value: value})
