@@ -83,8 +83,8 @@ module.exports = function (state) {
   }
 
   var scales = {
-    corr: d3.scaleLinear().domain([0.2, 0.9]).range(["rgb(95, 54, 53)", "rgb(224, 104, 100)"]),
-    rank: d3.scaleLinear().domain([0.2, 0.9]).range(["rgb(95, 54, 53)", "rgb(224, 104, 100)"]),
+    corr: d3.scaleLinear().domain([0.2, 0.8]).range(["rgb(95, 54, 53)", "rgb(224, 104, 100)"]),
+    rank: d3.scaleLinear().domain([0.2, 0.8]).range(["rgb(95, 54, 53)", "rgb(224, 104, 100)"]),
     loglik: d3.scaleLinear().domain([-20, 0]).range(["rgb(95, 54, 53)", "rgb(224, 104, 100)"]),
     info: d3.scaleLinear().domain([0, 5]).range(["rgb(95, 54, 53)", "rgb(224, 104, 100)"])
   }
