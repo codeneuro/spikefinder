@@ -15,9 +15,6 @@ module.exports = function (dataset, values, cb) {
     write(dir, function () {
       var cmd = 'spikefinder evaluate ' + 'answers/' + dataset + '.csv ' + dir + '/' + dataset + '.csv'
       exec(cmd, function (err, stdout, stderr) {
-        console.log(cmd)
-        console.log(stdout)
-        console.log(stderr)
         if (err) return cb(err)
         else if (stderr) return cb(err)
         else return cb(null, JSON.parse(stdout))
