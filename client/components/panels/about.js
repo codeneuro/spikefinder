@@ -16,11 +16,11 @@ module.exports = function (state) {
     <br>
     <br>
     <div>
-		  We have assembled a collection of datasets with simultaneously measured calcium traces and action potentials (ground truth) for benchmarking spike inference algorithms. You can download the data, develop your algorithm in the language of your choice, and submit a file to this website with your results. The leaderboard will rank algorithm performance across datasets. We will close submissions on 31st of January 2017.
+		  We have assembled a collection of datasets with simultaneously measured calcium traces and action potentials (ground truth) for benchmarking spike inference algorithms. You can download the data, develop your algorithm in the language of your choice, and submit a file to this website with your results. The leaderboard will rank algorithm performance across datasets. We will close submissions on 31st of March 2017.
     </div>
     <br>
     <div>
-      By participating, you get to advance the field and help the neuroscience community! The best algorithms will also receive an award, kindly sponspored by <a href="http://www.zeiss.com/corporate/en_de/careers.html">Carl Zeiss AG</a>. The winner will receive 1200€, the second place 500€ and the third place 300€. The winner will also be invited to visit the Zeiss AG research departement in Germany. We will report on the challenge in an article featuring any algorithms that beat current state of the art (STM/oopsi).
+      By participating, you get to advance the field and help the neuroscience community! The best algorithms will also receive an award, kindly sponspored by <a href="http://www.zeiss.com/corporate/en_de/careers.html">Carl Zeiss AG</a>. The winning team will receive 1200€, the second place 500€ and the third place 300€. The winner will also be invited to visit the Zeiss AG research departement in Germany. We will report on the challenge in an article featuring any algorithms that beat current state of the art (STM/oopsi).
     </div>
     <br>
     <div>

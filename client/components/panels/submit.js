@@ -158,11 +158,11 @@ function submit (state) {
       <div>The format of each submitted CSV file should be the same as for the spikes in the training data sets: columns correspond to neurons and rows are time points sampled at 100 Hz. You should submit one file for each training and testing dataset e.g. 1.train.spikes.csv, 2.train.spikes.csv, etc. and 1.test.spikes.csv, 2.test.spikes.csv, etc. for a total of 15 files. In each file, each column should contain the predicted spike rate or count for the neuron in the same column in the corresponding calcium file. See <a href='https://github.com/codeneuro/spikefinder-python'>here</a> for examples of saving results from python or matlab, and for info and code for the metrics used to evaluate results.
       </div>
 	  <br>
-      <div>The leaderboard will show multiple evaluation metrics, but the competition will be scored on pearson correlation between the true and infered spike trains resampled to 25 Hz as in Theis et al. (2016). 
+      <div>The leaderboard will show multiple evaluation metrics, but the competition will be scored on pearson correlation between the true and inferred spike trains resampled to 25 Hz as in Theis et al. (2016). 
   	  </div>
       
       <br>
-      <div>To create a submission, fill out the form below and drag all your CSV files into the well. Multiple submissions from the same group are fine. Submissions must include predictions for all training and testing data. We will show training set performance on the leaderboard until the official end of the challenge (January 31st, 2017) to prevent overfitting on the test set.
+      <div>To create a submission, fill out the form below and drag all your CSV files into the well. Multiple submissions from the same group are fine. Submissions must include predictions for all training and testing data. We will show training set performance on the leaderboard until the official end of the challenge (March 31st, 2017) to prevent overfitting on the test set.
   	  </div>
       <br>
       <div style=${style.form}>
