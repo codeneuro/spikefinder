@@ -45,6 +45,8 @@ module.exports = function (state) {
   <div>
     <span style=${style.dataset}><a href=${'https://s3.amazonaws.com/neuro.datasets/challenges/spikefinder/spikefinder.test.zip'}>01-05 testing data</a></span>
   </div>
+  
+   
   <br>
 	<div>
     For each training dataset there is a CSV file named 'calcium' with calcium flouresence signals, and a CSV file named 'spikes' with spike rates. For test datasets, there are only calcium files. The columns of each table are neurons, and the rows are time points. In a given dataset, some neurons will have slightly different numbers of time points than others, this is expected. 
@@ -78,5 +80,13 @@ module.exports = function (state) {
     <br>
     <span style=${style.dataset}>10</span> jRGECO1a, V1, Dana et al. 2016, training only [<a href='https://crcns.org/data-sets/methods/cai-2'>source</a>]
   </div>
+  
+  <span style=${style.dataset}>ALTERNATIVE DATAFORMAT</span>
+  The zip archive contains all datasets without preprocessing at their original resolution. See the format.txt for difference in file format. 
+  <div>
+    <span style=${style.dataset}><a href=${'../assets/nopreprocessing.zip'}>01-05 data without preprocessing at original sampling rate</a></span>
+  </div>
+  
+  
   </div>`
 }
