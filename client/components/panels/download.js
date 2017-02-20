@@ -82,9 +82,11 @@ module.exports = function (state) {
   </div>
   
   <span style=${style.dataset}>ALTERNATIVE DATAFORMAT</span>
-  The zip archive contains all datasets without preprocessing at their original resolution. See the format.txt for difference in file format. 
   <div>
-    <span style=${style.dataset}><a href=${'../assets/nopreprocessing.zip'}>01-05 data without preprocessing at original sampling rate</a></span>
+  The following file contains all datasets without preprocessing at their original resolution. See the format.txt for difference in file format. 
+  </div>
+  <div>
+    <span style=${style.dataset}><a href=${'../assets/nopreprocessing.zip'}>01-05 train and test data (no preprocessing)</a></span>
   </div>
   
   
