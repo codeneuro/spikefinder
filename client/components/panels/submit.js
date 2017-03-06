@@ -162,7 +162,7 @@ function submit (state) {
   	  </div>
       
       <br>
-      <div>To create a submission, fill out the form below and drag all your CSV files into the well. Multiple submissions from the same group are fine. Submissions must include predictions for all training and testing data. We will show training set performance on the leaderboard until the official end of the challenge (March 31st, 2017) to prevent overfitting on the test set.
+      <div>To create a submission, fill out the form below and drag all your CSV files into the well. Multiple submissions from the same group are fine. Submissions must include predictions for all training and testing data. We will show training set performance on the leaderboard until the official end of the challenge (April 30th, 2017) to prevent overfitting on the test set.
   	  </div>
       <br>
       <div style=${style.form}>
@@ -191,7 +191,7 @@ function submit (state) {
   	  <br>
       <br>
       <br>
-  	  <div style=${style.disclaimer}>Disclaimer & Terms: By submitting you agree to cooperate with us in preparing an article describing the results of this challenge, by making a complete description of your algorithm and executable code in Matlab, Python or other language of choice available. Included in the article will be all algorithms beating the current state of the art (STM/oopsi) and their contributors will be co-authors on the paper. We will award the prize money for winning the benchmark with respect to mean pearson correlation between true and inferred spike trains at 25 HZ computed on the test set. Your data will not be shared with anyone without your consent, in particular not with our sponsor.
+  	  <div style=${style.disclaimer}>Disclaimer & Terms: By submitting you agree to cooperate with us in preparing an article describing the results of this challenge, by making a complete description of your algorithm and executable code in Matlab, Python or other language of choice available. Included in the article will be all algorithms beating the current state of the art (STM/oopsi) and their contributors will be co-authors on the paper. We will award the prize money for winning the benchmark with respect to mean pearson correlation between true and inferred spike trains at 25 HZ computed on the test set (datasets 1-5). Your data will not be shared with anyone without your consent, in particular not with our sponsor.
     	</div>
     </div>
   </div>

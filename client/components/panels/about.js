@@ -16,7 +16,7 @@ module.exports = function (state) {
     <br>
     <br>
     <div>
-		  We have assembled a collection of datasets with simultaneously measured calcium traces and action potentials (ground truth) for benchmarking spike inference algorithms. You can download the data, develop your algorithm in the language of your choice, and submit a file to this website with your results. The leaderboard will rank algorithm performance across datasets. We will close submissions on 31st of March 2017.
+		  We have assembled a collection of datasets with simultaneously measured calcium traces and action potentials (ground truth) for benchmarking spike inference algorithms. You can download the data, develop your algorithm in the language of your choice, and submit a file to this website with your results. The leaderboard will rank algorithm performance across datasets. We will close submissions on 30th of April 2017 (new deadline!).
     </div>
     <br>
     <div>
