@@ -81,10 +81,12 @@ module.exports = function (state) {
     <span style=${style.dataset}>10</span> jRGECO1a, V1, Dana et al. 2016, training only [<a href='https://crcns.org/data-sets/methods/cai-2'>source</a>]
   </div>
   
+  <div style='margin-top: 24px'>
   <span style=${style.dataset}>ALTERNATIVE DATAFORMAT</span>
-  The zip archive contains all datasets without preprocessing at their original resolution. See the format.txt for difference in file format. 
   <div>
-    <span style=${style.dataset}><a href=${'../assets/nopreprocessing.zip'}>01-05 data without preprocessing at original sampling rate</a></span>
+  The following zip file contains all datasets without preprocessing at their original resolution. See the format.txt for difference in file format. 
+  </div>
+    <span style=${style.dataset}><a href=${'../assets/nopreprocessing.zip'}>01-05 train and test data (no preprocessing)</a></span>
   </div>
   
   
